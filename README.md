@@ -10,8 +10,8 @@ A compact, descriptive analysis of [GEO GSE266934](https://www.ncbi.nlm.nih.gov/
 Run with Python dependencies from `requirements.txt`:
 
 ```sh
-python research/transcriptomics/gse266934/analysis.py
+python notebook-runner.py notebooks/terputer-paclitaxel-single-cell.ipynb . 300
 node report-generator.mjs research/transcriptomics/gse266934/report-spec.json
 ```
 
-The source archive is downloaded and SHA-256 verified. There is one library per condition, so these comparisons are descriptive and do not establish biological reproducibility or target dependence.
+The source archive is downloaded and SHA-256 verified. The notebook runner records a receipt whose hash must match the saved notebook for the version 2 report specification. There is one library per condition, so these comparisons are descriptive and do not establish biological reproducibility or target dependence.
